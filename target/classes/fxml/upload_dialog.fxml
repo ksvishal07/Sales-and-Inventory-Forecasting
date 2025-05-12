@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.inventory.controller.UploadDialogController">
+    <header>
+        <Label text="Upload Sales Data" style="-fx-font-size: 18px;"/>
+    </header>
+    
+    <content>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="filePathField" HBox.hgrow="ALWAYS" promptText="Select CSV file..."/>
+                <Button text="Browse" onAction="#handleBrowse"/>
+            </HBox>
+            
+            <Label text="Data Preview:"/>
+            <TableView fx:id="previewTable" VBox.vgrow="ALWAYS" prefHeight="200"/>
+            
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Label fx:id="statusLabel" text=""/>
+            </HBox>
+        </VBox>
+    </content>
+    
+    <buttonTypes>
+        <ButtonType fx:constant="OK"/>
+        <ButtonType fx:constant="CANCEL"/>
+    </buttonTypes>
+</DialogPane> 

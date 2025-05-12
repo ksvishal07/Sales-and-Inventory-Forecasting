@@ -1,0 +1,10 @@
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\controller\DashboardController.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\controller\MainController.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\controller\UploadDialogController.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\Main.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\model\ForecastResult.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\model\InventoryItem.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\model\SalesData.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\service\DatabaseService.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\service\ForecastService.java
+M:\Projects\inventory_forecast_dashboard\src\main\java\com\inventory\service\ReportService.java

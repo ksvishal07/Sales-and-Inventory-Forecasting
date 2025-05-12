@@ -1,0 +1,12 @@
+com\inventory\controller\UploadDialogController.class
+com\inventory\model\SalesData.class
+com\inventory\model\ForecastResult.class
+com\inventory\controller\MainController.class
+com\inventory\controller\DashboardController$1.class
+com\inventory\Main.class
+com\inventory\controller\UploadDialogController$1.class
+com\inventory\controller\DashboardController.class
+com\inventory\service\DatabaseService.class
+com\inventory\model\InventoryItem.class
+com\inventory\service\ForecastService.class
+com\inventory\service\ReportService.class

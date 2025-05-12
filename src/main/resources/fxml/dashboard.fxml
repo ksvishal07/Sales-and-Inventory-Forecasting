@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.inventory.controller.DashboardController"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Inventory &amp; Sales Forecast Dashboard" style="-fx-font-size: 24px;"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Upload Data" onAction="#handleUploadData"/>
+        <Button text="Export Report" onAction="#handleExportReport"/>
+    </HBox>
+
+    <SplitPane VBox.vgrow="ALWAYS">
+        <!-- Left side: Inventory Table -->
+        <VBox spacing="5">
+            <Label fx:id="productTitleLabel" text="No product selected" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TableView fx:id="currentSalesTable" VBox.vgrow="ALWAYS" prefHeight="300">
+                <columns>
+                    <!-- <TableColumn text="Product Name" fx:id="currentSalesProductCol" /> -->
+                    <TableColumn text="Date" fx:id="currentSalesDateCol" />
+                    <TableColumn text="Quantity" fx:id="currentSalesQuantityCol" />
+                    <TableColumn text="Revenue" fx:id="currentSalesRevenueCol" />
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Right side: Charts -->
+        <VBox spacing="10" fx:id="chartContainer">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Sales Forecast" style="-fx-font-size: 16px;"/>
+                <ComboBox fx:id="itemSelector" prefWidth="200"/>
+                <ComboBox fx:id="modelSelector" prefWidth="200"/>
+                <Label fx:id="accuracyLabel" style="-fx-font-size: 14px;"/>
+            </HBox>
+            <LineChart fx:id="forecastChart" VBox.vgrow="ALWAYS" prefHeight="300">
+                <xAxis>
+                    <NumberAxis label="Day of Month" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Quantity" />
+                </yAxis>
+            </LineChart>
+            
+            <Label text="Forecasted Results" style="-fx-font-size: 16px;"/>
+            <TableView fx:id="forecastResultsTable" VBox.vgrow="ALWAYS" prefHeight="200">
+                <columns>
+                    <TableColumn text="Stocks to Buy" fx:id="forecastQuantityCol" />
+                    <TableColumn text="Assumed Sales Price" fx:id="forecastSalesPriceCol" />
+                    <TableColumn text="Month" fx:id="forecastMonthCol" />
+                </columns>
+            </TableView>
+        </VBox>
+    </SplitPane>
+</VBox> 
